@@ -50,4 +50,5 @@ router.get("/", (_req, res) => {
   return res.json(drinks);
 });
 
+
 export default router;

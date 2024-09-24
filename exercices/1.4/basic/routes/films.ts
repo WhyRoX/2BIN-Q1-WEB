@@ -55,8 +55,17 @@ router.get("/search", (req, res) => {
     const filteredFilms = films.filter((film) => {
         return film.title.startsWith(title);
     });
-    return res.json(filteredFilms);
+    const page = Number(req.query["page"]) || 1;
+    const limit = Number(req.query["limit"]) || 10;
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+
+    const paginatedFilms = filteredFilms.slice(startIndex, endIndex);
+
+    return res.json(paginatedFilms);
 });
+
+
 
 //Garder le /:id après le /search sinon, il va prendre "search" comme un id et ne pas rentrer dans la fonction de search
 router.get("/:id", (req, res) => {

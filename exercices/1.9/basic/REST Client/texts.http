@@ -1,0 +1,30 @@
+### Read all texts
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/texts
+
+### Read a single text (id)
+GET {{baseUrl}}/texts/fe52c746-c754-4177-9ac0-2fbc807de9de
+
+### Search text with level medium
+GET {{baseUrl}}/texts/?level=hard
+
+### Create a text
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+    "content": "Baby Shark",
+    "level": "medium"
+}
+
+### Delete a text
+DELETE {{baseUrl}}/texts/45f40bfa-7812-4836-be72-f858f4a23825
+
+### Update a text
+PUT {{baseUrl}}/texts/5a346858-4dc4-40cc-bf7d-b68e4fb98f59
+Content-Type: application/json
+
+{
+    "content": "Terrifier",
+    "level": "hard"
+}

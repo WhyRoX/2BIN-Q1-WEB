@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { Text } from '../types';
+import { Text, NewText } from '../types';
 import {
     createOneText,
     deleteText,
@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
     ) {
         return res.sendStatus(400);
     }
-    const { content, level } = body as Text;
+    const { content, level } = body as NewText;
     const newText = createOneText({ content, level });
     return res.json(newText);
 });

@@ -1,3 +1,5 @@
+import './Movie.css';
+
 export interface Movie {
   title: string;
   director: string;
@@ -5,8 +7,9 @@ export interface Movie {
 
 export const Movie = ({ title, director }: Movie) => {
   return (
-    <li>
-      <strong>{title}</strong> - Réalisateur : {director}
-    </li>
+    <div className="movie">
+      <h3>{title}</h3>
+      <p>{director}</p>
+    </div>
   );
 };

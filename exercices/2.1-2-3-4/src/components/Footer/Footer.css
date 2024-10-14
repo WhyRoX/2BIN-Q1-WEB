@@ -1,0 +1,25 @@
+/* footer {
+    background-color: #d8f30ca5;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p:hover {
+    text-decoration: underline;
+} */
+
+/* Footer.css */
+footer {
+    background-color: #d8f30ca5;
+    color: white;
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    position: relative;
+}
+footer p:hover {
+    text-decoration: underline;
+}

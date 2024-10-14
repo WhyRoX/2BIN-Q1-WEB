@@ -1,5 +1,5 @@
 import { Movie } from "../Movie";
-
+import "./Cinema.css";
 export interface CinemaProps {
   name: string;
   movies: Movie[];
@@ -7,11 +7,14 @@ export interface CinemaProps {
 
 export const Cinema = ({ name, movies }: CinemaProps) => {
   return (
-    <div>
+    <div className="cinema">
       <h2>{name}</h2>
       <ul>
         {movies.map((movie, index) => (
-          <Movie key={index} {...movie} />
+          <li key={index}>
+        <h3>{movie.title}</h3>
+        <p>{movie.director}</p>
+          </li>
         ))}
       </ul>
     </div>

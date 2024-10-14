@@ -1,17 +1,19 @@
-interface DrinkCardProps {
+import { ReactElement } from "react";
+import DrinkCard from "./DrinkCard";
+import './DrinkMenu.css';
+
+export interface DrinkMenuProps {
   title: string;
-  image: string;
-  children: React.ReactNode;
+  children: ReactElement<typeof DrinkCard> | ReactElement<typeof DrinkCard>[];
 }
 
-const DrinkCard = (props: DrinkCardProps) => {
+export const DrinkMenu = (props: DrinkMenuProps) => {
   return (
-    <div className="drink-card">
-      <img src={props.image} alt={props.title} className="drink-image" width="50"/>
-      <h2>{props.title}</h2>
-      <div className="drink-details">{props.children}</div>
+    <div className="drink-menu">
+      <h4>{props.title}</h4>
+      <div className="drink-items">{props.children}</div>
     </div>
   );
 };
 
-export default DrinkCard;
+export default DrinkMenu;

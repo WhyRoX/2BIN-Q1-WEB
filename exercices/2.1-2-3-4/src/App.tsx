@@ -1,4 +1,4 @@
-const Header = (props: { title: string }) => {
+const PageTitle = (props: { title: string }) => {
   return <h1>{props.title}</h1>;
 }
 
@@ -56,7 +56,7 @@ const App = () => {
 
   return (
     <div>
-      <Header title={pageTitle} />
+      <PageTitle title={pageTitle} />
       <Cinema name={cinema1Name} movies={cinema1Movies} />
       <Cinema name={cinema2Name} movies={cinema2Movies} />
       <Cinema name={cinema3Name} movies={cinema3Movies} />

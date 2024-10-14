@@ -1,13 +1,17 @@
-const PageTitle = (props: { title: string }) => {
-  return <h1>{props.title}</h1>;
+interface PageTitleProps {
+  title: string;
 }
 
-interface MovieProps {
+const PageTitle = ({title}: PageTitleProps) => {
+  return <h1>{title}</h1>;
+}
+
+interface Movie {
   title: string;
   director: string;
 }
 
-const Movie = ({ title, director }: MovieProps) => {
+const Movie = ({ title, director }: Movie) => {
   return (
     <li>
       <strong>{title}</strong> - Réalisateur : {director}
@@ -17,7 +21,7 @@ const Movie = ({ title, director }: MovieProps) => {
 
 interface CinemaProps {
   name: string;
-  movies: MovieProps[];
+  movies: Movie[];
 }
 
 const Cinema = ({ name, movies }: CinemaProps) => {
@@ -38,20 +42,20 @@ const App = () => {
 
   const cinema1Name = "UGC DeBrouckère";
   const cinema1Movies = [
-    { title: "Film 1 - Blop", director: "Director A" },
-    { title: "Film 2 - Qqch", director: "Director B" },
+    { title: "HAIKYU-THE DUMPSTER BATTLE", director: "Susumu Mitsunaka " },
+    { title: "GOODBYE JULIA", director: "Mohamed Kordofani" },
   ];
 
   const cinema2Name = "UGC Toison d'Or";
   const cinema2Movies = [
-    { title: "Film 1 - Test d'Or", director: "Director C" },
-    { title: "Film 2 - Steak d'Or", director: "Director D" },
+    { title: "THE WATCHER", director: "Ishana Night Shyamalan" },
+    { title: "BAD BOYS: RIDE OR DIE", director: "Bilall Fallah" },
   ];
 
   const cinema3Name = "Kinepolis";
   const cinema3Movies = [
-    { title: "Film 1 - Flic", director: "Director E" },
-    { title: "Film 2 - Bruh", director: "Director F" },
+    { title: "Flic", director: "Enes Yumer" },
+    { title: "Bruh", director: "Enes Yumer 2e du nom" },
   ];
 
   return (

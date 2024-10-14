@@ -1,41 +1,5 @@
-interface PageTitleProps {
-  title: string;
-}
-
-const PageTitle = ({ title }: PageTitleProps) => {
-  return <h1>{title}</h1>;
-};
-
-interface Movie {
-  title: string;
-  director: string;
-}
-
-const Movie = ({ title, director }: Movie) => {
-  return (
-    <li>
-      <strong>{title}</strong> - Réalisateur : {director}
-    </li>
-  );
-};
-
-interface CinemaProps {
-  name: string;
-  movies: Movie[];
-}
-
-const Cinema = ({ name, movies }: CinemaProps) => {
-  return (
-    <div>
-      <h2>{name}</h2>
-      <ul>
-        {movies.map((movie, index) => (
-          <Movie key={index} {...movie} />
-        ))}
-      </ul>
-    </div>
-  );
-};
+import { PageTitle } from "../PageTitle";
+import { Cinema } from "../Cinema";
 
 const App = () => {
   const pageTitle = "Informations sur les films dans les cinémas";

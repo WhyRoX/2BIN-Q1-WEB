@@ -2,9 +2,9 @@ interface PageTitleProps {
   title: string;
 }
 
-const PageTitle = ({title}: PageTitleProps) => {
+const PageTitle = ({ title }: PageTitleProps) => {
   return <h1>{title}</h1>;
-}
+};
 
 interface Movie {
   title: string;
@@ -17,7 +17,7 @@ const Movie = ({ title, director }: Movie) => {
       <strong>{title}</strong> - Réalisateur : {director}
     </li>
   );
-}
+};
 
 interface CinemaProps {
   name: string;
@@ -35,7 +35,7 @@ const Cinema = ({ name, movies }: CinemaProps) => {
       </ul>
     </div>
   );
-}
+};
 
 const App = () => {
   const pageTitle = "Informations sur les films dans les cinémas";

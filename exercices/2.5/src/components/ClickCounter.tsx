@@ -10,9 +10,9 @@ interface ClickCounterProps {
 
 const ClickCounter = ({
     title,
-    on10ClickMessage = '',
-    onMouseOverMessage = '',
-    secretMessage = ''
+    on10ClickMessage,
+    onMouseOverMessage,
+    secretMessage
 }: ClickCounterProps) => {
     const [count, setCount] = useState(0);
     const [isMouseOver, setIsMouseOver] = useState(false);

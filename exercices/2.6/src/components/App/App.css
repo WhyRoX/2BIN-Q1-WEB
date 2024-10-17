@@ -1,0 +1,12 @@
+body {
+    background-color: #e82bd220;
+    margin: 0;
+    padding-top: 30px; /* Adjust based on the header height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure the body takes the full viewport height */
+}
+
+main {
+    padding: 25px; /* Adjust based on your content structure */
+}

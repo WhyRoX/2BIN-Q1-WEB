@@ -1,0 +1,32 @@
+/* Cinema.css */
+.cinema {
+    margin-bottom: 20px;
+}
+
+.cinema h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.cinema ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cinema li {
+    background: #1ef6dd16;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cinema li h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.cinema li p {
+    margin: 0;
+    color: #00ece0;
+}

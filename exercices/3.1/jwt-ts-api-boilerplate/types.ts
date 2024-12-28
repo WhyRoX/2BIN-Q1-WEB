@@ -46,6 +46,18 @@ interface JwtPayload {
   iat: number; // Issued at time (in seconds since the epoch)
 }
 
+interface Film {
+  id: number;
+  title: string;
+  director: string;
+  duration: number;
+  budget?: number;
+  description?: string;
+  imageUrl?: string;
+} 
+
+type NewFilm = Omit<Film, "id">;
+
 export type {
   Pizza,
   NewPizza,
@@ -57,4 +69,6 @@ export type {
   PotentialUser,
   AuthenticatedRequest,
   JwtPayload,
+  Film,
+  NewFilm,
 };
